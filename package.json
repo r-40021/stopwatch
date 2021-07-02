@@ -1,0 +1,19 @@
+{
+  "name": "stopwatch",
+  "version": "1.0.0",
+  "description": "This is a stopwatch",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-40021/stopwatch.git"
+  },
+  "author": "r-40021",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/r-40021/stopwatch/issues"
+  },
+  "homepage": "https://github.com/r-40021/stopwatch#readme"
+}
