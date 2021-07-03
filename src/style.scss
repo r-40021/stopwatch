@@ -32,6 +32,19 @@ body {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
+}
+a:not(.myBtn-basic):link{
+  color: #63a0f7;
+}
+a:not(.myBtn-basic):visited{
+  color: #9d47ff;
+}
+a:not(.myBtn-basic):hover{
+  color: #76adfa;
+}
+a:not(.myBtn-basic):active{
+  color: #ff8c2e;
 }
 h2 {
   font-size: 25px;
@@ -76,6 +89,9 @@ h2 {
   border-color: var(--blue);
 }
 .myBtn-basic {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   color: var(--grayText);
   transition: opacity 0.2s;
   &:hover {
@@ -137,6 +153,9 @@ h2 {
 }
 .share a{
     padding: 0 0.5em;
+}
+.buttons{
+  letter-spacing: .3em;
 }
 @media screen and (max-width: 640px) {
   .modal {
