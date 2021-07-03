@@ -1,6 +1,8 @@
 import {resize} from "./style";
 import { start, stop, clear } from "./countup";
 import { toggleTheme } from "./theme";
+import { changeShareIcon } from "./device";
+import { copy, tweet } from "./share";
   resize();
   window.addEventListener("resize",resize,false);
   document.getElementById("start").addEventListener("click", start, false);
@@ -61,3 +63,6 @@ import { toggleTheme } from "./theme";
       console.error(e2);
     }
 }
+changeShareIcon();
+window.copy = copy;
+window.tweet = tweet;

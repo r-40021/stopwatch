@@ -135,6 +135,9 @@ h2 {
     z-index: 99998;
   }
 }
+.share a{
+    padding: 0 0.5em;
+}
 @media screen and (max-width: 640px) {
   .modal {
     width: 90vw;
@@ -145,7 +148,7 @@ h2 {
   top: 10px;
   right: 10px;
   & a {
-    margin: 0 0.2em;
+    margin: 0 0.4em;
     text-decoration: none;
   }
 }
