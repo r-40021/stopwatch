@@ -3,6 +3,8 @@ import { start, stop, clear } from "./countup";
 import { toggleTheme } from "./theme";
 import { changeShareIcon } from "./device";
 import { copy, tweet } from "./share";
+import NoSleep from 'nosleep.js';
+
   resize();
   window.addEventListener("resize",resize,false);
   document.getElementById("start").addEventListener("click", start, false);
@@ -64,5 +66,26 @@ import { copy, tweet } from "./share";
     }
 }
 changeShareIcon();
+var noSleep = new NoSleep();
+  // Enable wake lock.
+  // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+  let eventType;
+  if (window.ontouchstart) {
+    eventType = "touchstart";
+  } else {
+    eventType = "click";
+  }
+  let eventTime = 0;
+  document.body.addEventListener(eventType, enableNoSleep, false);
+  function enableNoSleep() {
+    if (eventTime <= 10) {
+      noSleep.disable();
+      noSleep.enable();
+    } else {
+      document.removeEventListener(eventType, enableNoSleep, false);
+    }
+    eventTime++;
+  }
+
 window.copy = copy;
 window.tweet = tweet;
