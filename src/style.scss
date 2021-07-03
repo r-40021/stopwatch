@@ -1,37 +1,39 @@
-$font-family:  -apple-system, blinkMacSystemFont, "Helvetica Neue", "Segoe UI",
-"Arial", "Roboto", "Hiragino Kaku Gothic ProN", YuGothicM, YuGothic, Meiryo,
-sans-serif;
+$font-family: -apple-system, blinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+  "Arial", "Roboto", "Hiragino Kaku Gothic ProN", YuGothicM, YuGothic, Meiryo,
+  sans-serif;
 :root {
-    --bgColor: #f7f7f7;
-    --fontColor: rgb(75, 75, 75);
-    --blue: #2e85ff;
-    --grayText: #666;
-  }
-  html,
-  body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    -webkit-touch-callout: none;
+  --bgColor: #f7f7f7;
+  --fontColor: rgb(75, 75, 75);
+  --blue: #2e85ff;
+  --grayText: #666;
+}
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+}
+*{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-  }
-  body {
-      background-color: var(--bgColor);
-      color: var(--fontColor);
-      font-family:$font-family;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+}
+body {
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+  font-family: $font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 a {
-    cursor: pointer;
+  cursor: pointer;
 }
 h2 {
-    font-size: 25px;
+  font-size: 25px;
 }
 @font-face {
   font-family: YuGothicM;
@@ -44,97 +46,186 @@ h2 {
   font-weight: bold;
   src: local("YoGothic-Bold"), local("Yu Gothic");
 }
-.displayTime{
-    font-size: xx-large;
-    font-family: 'Open Sans',$font-family;
-    font-weight: 600;
-    line-height: 1.2;
+.displayTime {
+  font-size: xx-large;
+  font-family: "Open Sans", $font-family;
+  font-weight: 600;
+  line-height: 1.2;
 }
 .small {
-    font-size: 0.5em;
+  font-size: 0.5em;
 }
 .myBtn-circle {
-    border: var(--grayText) solid 1px;
-    color: var(--fontColor);
-    position: relative;
-    line-height: 60px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0.1rem 0.1rem;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-  }
-  .myBtn-circle:not(.nohover):hover {
-    color: var(--blue);
-    border-color: var(--blue);
-  }
-  .myBtn-basic:hover{
+  border: var(--grayText) solid 1px;
+  color: var(--fontColor);
+  position: relative;
+  line-height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.1rem 0.1rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.myBtn-circle:not(.nohover):hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.myBtn-basic {
+  color: var(--grayText);
+  transition: opacity 0.2s;
+  &:hover {
     opacity: 0.5;
   }
-  #stop{
-      display: none;
+}
+#stop {
+  display: none;
+}
+.modal {
+  opacity: 0;
+  transform: scale(0.8);
+  z-index: -1;
+  transform-origin: top center;
+  position: fixed;
+  margin: 0 auto;
+  display: block;
+  text-align: start;
+  width: 60%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 0.2rem 2rem;
+  background-color: var(--bgColor);
+  z-index: -1;
+  & h2 {
+    padding-bottom: 0.3em;
   }
-  .modal{
+  & .close {
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+  }
+  transition: opacity 0.2s, transform 0.2s;
+  &:not(:target) {
+    transition: z-index 0.2s, opacity 0.2s, transform 0.2s;
+  }
+}
+.modal-overlay {
+  display: block;
+  cursor: default;
+  opacity: 0;
+  z-index: -2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.2s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal:target {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 99999;
+  & ~ .modal-overlay {
+    opacity: 1;
+    z-index: 99998;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modal {
+    width: 90vw;
+  }
+}
+.info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  & a {
+    margin: 0 0.2em;
+    text-decoration: none;
+  }
+}
+//   radio
+$primary-color: #2e85ff;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.radio-tile-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  //set dimensions for invisible container
+  .input-container {
+    position: relative;
+    height:  7rem;
+    width:  7rem;
+    margin: 0.5rem;
+
+    //make actual radio input invisible
+    // + stretch to fill container
+    .radio-button {
       opacity: 0;
-      transform: scale(0.8);
-      z-index: -1;
-      transform-origin: top center;
-      position: fixed;
-      margin: 0 auto;
-      display: block;
-      text-align: start;
-      width: 40%;
-      max-height: 80vh;
-      overflow-y: auto;
-      padding: 0.2rem 2rem;
-      background-color: var(--bgColor);
-      z-index: -1;
-      & h2{
-          padding-bottom: 0.3em;
-      }
-      & .close{
-          position: absolute;
-          top: 0.2em;
-          right: 0.2em;
-      }
-      transition: opacity .2s, transform .2s;
-      &:not(:target){
-          transition: z-index .2s, opacity .2s, transform .2s;
-      }
-  }
-  .modal-overlay{
-      display: block;
-      cursor: default;
-      opacity: 0;
-      z-index: -2;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      transition: opacity .2s;
-      background-color: rgba(0,0,0,0.5);
-  }
-  .modal:target{
-      opacity: 1;
-      transform: scale(1);
-      z-index: 99999;
-      & + .modal-overlay{
-          opacity: 1;
-          z-index: 99998;
-      }
-  }
-  @media screen and (max-width: 640px) {
-      .modal{
-          width: 70vw;
-      }
-  }
-  .info {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    //default tile styles
+    .radio-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $primary-color;
+      border-radius: 5px;
+      padding: 1rem;
+      transition: transform 300ms ease;
+    }
+    .icon svg {
+      fill: $primary-color;
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 0.5em;
+    }
+    .radio-tile-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $primary-color;
+    }
+
+    //active tile styles
+    .radio-button:checked + .radio-tile {
+      background-color: $primary-color;
+      border: 2px solid $primary-color;
+      color: white;
+      transform: scale(1.1, 1.1);
+      
+      .icon svg {
+        fill: white;
+        background-color: $primary-color;
+      }
+      .radio-tile-label {
+        color: white;
+        background-color: $primary-color;
+      }
+    }
   }
+}
