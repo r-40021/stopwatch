@@ -12,9 +12,7 @@ export function start() {
 export function countup() {
     let now = Date.now();
     diffTime = now - startTime + stopTime;
-    console.log(diffTime);
     var diffHour = Math.floor(diffTime / (1000 * 60 * 60)); //時間に変換
-    console.log(diffHour);
     var diffMinute = Math.floor(
         (diffTime - diffHour * 1000 * 60 * 60) / (1000 * 60)
     ); //分に変換
