@@ -57,15 +57,15 @@ h2 {
     border: var(--grayText) solid 1px;
     color: var(--fontColor);
     position: relative;
-    line-height: 80px;
+    line-height: 60px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     padding: 0.1rem 0.1rem;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
   }
   .myBtn-circle:not(.nohover):hover {
@@ -87,7 +87,6 @@ h2 {
       width: 40%;
       max-height: 80vh;
       overflow-y: auto;
-      border: #666 solid 1px;
       padding: 0.2rem 2rem;
       background-color: var(--bgColor);
       z-index: -1;
