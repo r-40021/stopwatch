@@ -30,8 +30,8 @@ sans-serif;
 a {
     cursor: pointer;
 }
-h1 {
-    font-size: 35px;
+h2 {
+    font-size: 25px;
 }
 @font-face {
   font-family: YuGothicM;
@@ -72,23 +72,34 @@ h1 {
     color: var(--blue);
     border-color: var(--blue);
   }
+  .myBtn-basic:hover{
+    opacity: 0.8;
+  }
   .modal{
       opacity: 0;
       transform: scale(0.8);
+      z-index: -1;
       transform-origin: top center;
       position: fixed;
       margin: 0 auto;
       display: block;
       text-align: start;
       width: 40%;
+      max-height: 80vh;
+      overflow-y: auto;
       border: #666 solid 1px;
-      padding: 0rem 2rem;
+      padding: 0.2rem 2rem;
       background-color: var(--bgColor);
-      & h1{
-          border-bottom: var(--grayText) solid 0.1px;
+      z-index: -1;
+      & h2{
+          padding-bottom: 0.3em;
+      }
+      & .close{
+          position: absolute;
+          top: 0.2em;
+          right: 0.2em;
       }
       transition: opacity .3s, transform .3s;
-      animation: z-index .3s;
   }
   .modal-overlay{
       display: block;
@@ -112,11 +123,13 @@ h1 {
           z-index: 99998;
       }
   }
-  @keyframes z-index{
-      0%{
-          z-index: -1;
+  @media screen and (max-width: 640px) {
+      .modal{
+          width: 70vw;
       }
-      100%{
-          z-index: 99999;
-      }
+  }
+  .info {
+      position: absolute;
+      top: 10px;
+      right: 10px;
   }
