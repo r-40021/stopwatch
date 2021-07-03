@@ -1,12 +1,12 @@
 export function resize() {
     const place = document.getElementById("displayTime");
-    let count = document.getElementById("displayHour").textContent.length + document.getElementById("displayMin").textContent.length + document.getElementById("displaySec").textContent.length + document.getElementById("displayMil").textContent.length;
-    if (count < 9) {
-      count = 9;
+    let count = document.getElementById("displayHour").textContent.length + document.getElementById("displaySmall").textContent.length;
+    if (count < 10) {
+      count = 10;
     }
     if (window.innerWidth <= 775) {
-      place.style.fontSize = 150 / count + "vmin";
+      place.style.fontSize = 210 / count + "vmin";
     } else {
-      place.style.fontSize = 185 / count + "vmin";
+      place.style.fontSize = 230 / count + "vmin";
     }
   }
