@@ -195,3 +195,12 @@ label {
   input:checked + label::after {
     opacity: 1;
   }
+  body.dark {
+    --bgColor: rgb(32, 32, 32);
+    --fontColor: rgb(232, 232, 232);
+    --grayText: rgb(216, 215, 215);
+    --blue: #4793ff;
+  }
+  body.anime * {
+    transition: background-color 0.3s ease-in-out;
+  }

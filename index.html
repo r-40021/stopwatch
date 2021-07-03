@@ -12,6 +12,11 @@
 </head>
 
 <body>
+    <script>
+        if ((localStorage.getItem("theme") === "dark" || window.matchMedia("(prefers-color-scheme: dark)").matches) && localStorage.getItem("theme") !== "light") {
+            document.body.classList.add("dark");
+        }
+    </script>
     <div class="info">
         <a href="#theme" class="myBtn-basic">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-moon"
