@@ -77,8 +77,12 @@ export function toggleTheme(mql) {
       let color;
       if (type === "dark") {
         color = "#333";
+        document.getElementById("openSun").style.display = "none";
+        document.getElementById("openMoon").style.display = "initial";
       } else {
         color = "#f8f9fa";
+        document.getElementById("openSun").style.display = "initial";
+        document.getElementById("openMoon").style.display = "none";
       }
       let head = document.head.children;
       for (let index = 0; index < head.length; index++) {
@@ -92,7 +96,7 @@ export function toggleTheme(mql) {
   }
   function noActive() {
     //すべてのボタンを非アクティブにする
-    let list = document.querySelectorAll("#settings-3 .radio input");
+    let list = document.querySelectorAll(".radio input");
     list.forEach(function (element) {
       element.removeAttribute("checked");
     });
