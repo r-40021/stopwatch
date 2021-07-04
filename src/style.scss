@@ -151,8 +151,22 @@ h2 {
     z-index: 99998;
   }
 }
-.share a{
-    padding: 0 0.5em;
+.share a.shareContent{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 2.5em;
+    & .icon{
+      width: 28px;
+      display: inline-flex;
+    }
+    & .text{
+      flex: 1;
+      display: inline-flex;
+    }
+}
+.share {
+  padding-bottom: 1em;
 }
 .buttons{
   letter-spacing: .3em;
@@ -186,7 +200,8 @@ label {
     position: relative;
     display: block;
     width: 100%;
-    line-height: 1.5;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
   }
   
   label::before,
