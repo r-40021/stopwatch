@@ -1,3 +1,4 @@
+[日本語 (Japanese)](README_ja.md)
 # Simple Stopwatch
 
 <img src="./favicon/OGP.png" alt="logo" width = 60%>
