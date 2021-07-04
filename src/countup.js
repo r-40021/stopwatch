@@ -1,3 +1,4 @@
+import { resize } from "./style";
 let stopTime = 0;
 let startTime;
 let upInterval;
@@ -45,6 +46,7 @@ export function countup() {
     }
     if (oldHour != display) {
     document.getElementById("displayHour").textContent = display;
+    resize();
     oldHour = display;
     }
     document.getElementById("displayMil").textContent = diffMil;
@@ -61,6 +63,7 @@ export function clear() {
     startTime = Date.now();
     document.getElementById("displayHour").textContent = "00:00";
     document.getElementById("displayMil").textContent = "000";
+    resize();
 }
 export function isCountFunc (){
     return isCount;
