@@ -8,7 +8,7 @@ export function tweet() {
     // ツイート文を作成
     let base = "https://twitter.com/intent/tweet?";
     let hashtags = "やまだのタイマー,やまだけんいち";
-    let text = "シンプルすぎるストップウォッチ";
+    let text = "オープンソースのシンプルかつ軽量なストップウォッチ";
     let url;
       url =
         base +
