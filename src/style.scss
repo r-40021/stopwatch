@@ -164,6 +164,9 @@ h2 {
       flex: 1;
       display: inline-flex;
     }
+    & #checkedIcon {
+      color: #00B06B;
+    }
 }
 .share {
   padding-bottom: 1em;
