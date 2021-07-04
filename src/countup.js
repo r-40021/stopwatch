@@ -3,11 +3,13 @@ let startTime;
 let upInterval;
 let diffTime;
 let oldHour;
+let isCount = false;
 export function start() {
     startTime = Date.now();
     upInterval = setInterval(countup, 1);
     document.getElementById("start").style.display = "none";
     document.getElementById("stop").style.display = "inline-flex";
+    isCount = true;
 }
 export function countup() {
     let now = Date.now();
@@ -52,10 +54,14 @@ export function stop() {
     document.getElementById("stop").style.display = "";
     document.getElementById("start").style.display = "";
     stopTime = diffTime;
+    isCount = false;
 }
 export function clear() {
     stopTime = 0;
     startTime = Date.now();
     document.getElementById("displayHour").textContent = "00:00";
     document.getElementById("displayMil").textContent = "000";
+}
+export function isCountFunc (){
+    return isCount;
 }

@@ -1,5 +1,5 @@
 import {resize} from "./style";
-import { start, stop, clear } from "./countup";
+import { start, stop, clear, isCountFunc } from "./countup";
 import { toggleTheme } from "./theme";
 import { changeShareIcon } from "./device";
 import { copy, tweet } from "./share";
@@ -86,6 +86,20 @@ var noSleep = new NoSleep();
     }
     eventTime++;
   }
+  window.addEventListener("keydown",(e)=>{
+    if (!e.repeat) {
+      if (e.code === "Space" || e.key === "Enter") {
+        if (isCountFunc()) {
+          stop();
+        } else {
+          start();
+        }
+        
+      } else if (e.key === "c") {
+        clear();
+      }
+    }
+  })
 
 window.copy = copy;
 window.tweet = tweet;
