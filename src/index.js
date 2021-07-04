@@ -6,10 +6,16 @@ import { copy, tweet } from "./share";
 import NoSleep from 'nosleep.js';
 
   resize();
+  let myEventType;
+  if( window.ontouchstart !== undefined && 0 < navigator.maxTouchPoints ) {
+    myEventType = "touchstart";
+  } else {
+    myEventType = "click";
+  }
   window.addEventListener("resize",resize,false);
-  document.getElementById("start").addEventListener("click", start, false);
-  document.getElementById("stop").addEventListener("click", stop, false);
-  document.getElementById("clear").addEventListener("click", clear, false);
+  document.getElementById("start").addEventListener(myEventType, start, false);
+  document.getElementById("stop").addEventListener(myEventType, stop, false);
+  document.getElementById("clear").addEventListener(myEventType, clear, false);
 
   const isDark = window.matchMedia("(prefers-color-scheme: dark)");//ダークモード？
   if (localStorage.getItem("theme") === "dark") {
