@@ -46,21 +46,21 @@
         }
     </script>
     <div class="info">
-        <a href="#theme" class="myBtn-basic">
+        <a href="#theme" class="myBtn-basic modalTrigger">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-moon"
                 viewBox="0 0 16 16" aria-label="テーマ切り替え" style="display: none;" id="openMoon">
                 <path
                     d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
             </svg>
         </a>
-        <a href="#theme" class="myBtn-basic" id="openSun">
+        <a href="#theme" class="myBtn-basic modalTrigger" id="openSun">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-sun"
                 viewBox="0 0 16 16">
                 <path
                     d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
             </svg>
         </a>
-        <a href="#share" class="myBtn-basic">
+        <a href="#share" class="myBtn-basic modalTrigger">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
                 class="bi bi-box-arrow-up" viewBox="0 0 16 16" id="arrowUp">
                 <path fill-rule="evenodd"
@@ -74,7 +74,7 @@
                     d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
             </svg>
         </a>
-        <a href="#about" class="myBtn-basic">
+        <a href="#about" class="myBtn-basic modalTrigger">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-info-circle"
                 viewBox="0 0 16 16" aria-label="このアプリについて">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -112,8 +112,7 @@
         </a>
     </div>
     <div class="modal" id="about">
-        <div class="close"><a href="#" onclick="setTimeout(() => {history.replaceState(null,null,'./')}, 1);"
-                class="myBtn-basic"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+        <div class="close"><a class="myBtn-basic modalClose"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-x" viewBox="0 0 16 16" aria-label="閉じる">
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
@@ -127,26 +126,24 @@
         <p><a href="https://r-40021.github.io/countdown-timer/" target="_blank" rel="noopener">タイマー</a>をお探しですか？</p>
     </div>
     <div class="modal" id="theme">
-        <div class="close"><a href="#" onclick="setTimeout(() => {history.replaceState(null,null,'./')}, 1);"
-                class="myBtn-basic"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+        <div class="close"><a class="myBtn-basic modalClose"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-x" viewBox="0 0 16 16" aria-label="閉じる">
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                 </svg></a></div>
         <h2>テーマ切り替え</h2>
         <div class="radio">
-            <input class="visually-hidden" type="radio" name="fruits" id="sync" checked />
+            <input class="visually-hidden" type="radio" name="theme" id="sync" checked />
             <label for="sync">システムの設定に従う</label>
-            <input class="visually-hidden" type="radio" name="fruits" id="light" />
+            <input class="visually-hidden" type="radio" name="theme" id="light" />
             <label for="light">ライトモード</label>
-            <input class="visually-hidden" type="radio" name="fruits" id="dark" />
+            <input class="visually-hidden" type="radio" name="theme" id="dark" />
             <label for="dark">ダークモード</label>
         </div>
 
     </div>
     <div class="modal" id="share">
-        <div class="close"><a href="#" onclick="setTimeout(() => {history.replaceState(null,null,'./')}, 1);"
-                class="myBtn-basic"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+        <div class="close"><a class="myBtn-basic modalClose"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-x" viewBox="0 0 16 16" aria-label="閉じる">
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />

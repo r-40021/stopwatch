@@ -4,6 +4,7 @@ import { toggleTheme } from "./theme";
 import { changeShareIcon } from "./device";
 import { copy, tweet } from "./share";
 import NoSleep from 'nosleep.js';
+import { modalTrigger, modalClose } from "./modal";
 
   resize();
   let myEventType;
@@ -106,6 +107,7 @@ var noSleep = new NoSleep();
       }
     }
   })
-
+modalTrigger();
+modalClose();
 window.copy = copy;
 window.tweet = tweet;
