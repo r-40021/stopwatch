@@ -7,14 +7,14 @@ export function modalTrigger() {
             let leave = false;
             element.addEventListener("touchstart", (e) => {
                 leave = false;
-                element.addEventListener("touchend",(e)=>{
+                element.addEventListener("touchend", (e) => {
                     if (!leave) {
                         e.preventDefault();
                         location.hash = element.getAttribute("href");
                     }
                 })
             }, false);
-            element.addEventListener("touchmove",(e)=>{
+            element.addEventListener("touchmove", (e) => {
                 if (document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY) !== element) {
                     leave = true;
                 }
@@ -29,6 +29,7 @@ export function modalTrigger() {
 }
 
 export function modalClose() {
+    history.replaceState(null,null,"./");
     let elements = document.getElementsByClassName("modalClose");
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
@@ -36,17 +37,14 @@ export function modalClose() {
             let leave = false;
             element.addEventListener("touchstart", (e) => {
                 leave = false;
-                element.addEventListener("touchend",(e)=>{
+                element.addEventListener("touchend", (e) => {
                     if (!leave) {
-                            e.preventDefault();
-                            location.hash = "";
-                            setTimeout(() => {
-                                history.replaceState(null,null,"./");
-                            }, 1);
+                        e.preventDefault();
+                        history.go(-1);
                     }
                 })
             }, false);
-            element.addEventListener("touchmove",(e)=>{
+            element.addEventListener("touchmove", (e) => {
                 if (document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY) !== element) {
                     leave = true;
                 }
@@ -54,10 +52,7 @@ export function modalClose() {
         } else {
             element.addEventListener("click", (e) => {
                 e.preventDefault();
-                location.hash = "";
-                setTimeout(() => {
-                    history.replaceState(null,null,"./");
-                }, 1);
+                history.go(-1);
 
             }, false);
         }
