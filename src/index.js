@@ -11,7 +11,7 @@ import { modalTrigger, modalClose } from "./modal";
   if( window.ontouchstart !== undefined && 0 < navigator.maxTouchPoints ) {
     myEventType = "touchstart";
   } else {
-    myEventType = "click";
+    myEventType = "mousedown";
   }
   window.addEventListener("resize",resize,false);
   document.getElementById("start").addEventListener(myEventType, start, false);
