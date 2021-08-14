@@ -1,4 +1,4 @@
-var CACHE_NAME = 'st-20210708';
+var CACHE_NAME = 'st-20210714';
 var urlsToCache = [
   './index.html',
   './dist/style.css',

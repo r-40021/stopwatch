@@ -2,7 +2,7 @@ import {resize} from "./style";
 import { start, stop, clear, isCountFunc } from "./countup";
 import { toggleTheme } from "./theme";
 import { changeShareIcon } from "./device";
-import { copy, tweet } from "./share";
+import { copy, tweet, shareAPI } from "./share";
 import NoSleep from 'nosleep.js';
 import { modalTrigger, modalClose } from "./modal";
 
@@ -109,5 +109,7 @@ var noSleep = new NoSleep();
   })
 modalTrigger();
 modalClose();
+shareAPI();
+
 window.copy = copy;
 window.tweet = tweet;

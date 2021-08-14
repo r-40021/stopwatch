@@ -27,3 +27,23 @@ export function tweet() {
     encodeURIComponent(location.href.replace(location.hash, ""));
   return url;
 }
+
+export function shareAPI() {
+  const shareAPIElement = document.getElementById("shareAPI");
+  if (!navigator.share) {
+    shareAPIElement.remove();
+  }
+  shareAPIElement.addEventListener("click", async () => {
+    const shareData = {
+      title: "Simple Stopwatch",
+      text: "オープンソースのシンプルかつ軽量なストップウォッチ。インストール不要です。",
+      url: location.href
+    }
+
+    try {
+      await navigator.share(shareData)
+    } catch (err) {
+      console.error("Web Share API:" + err);
+    }
+  })
+}
