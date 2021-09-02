@@ -58,4 +58,9 @@ export function modalClose() {
             }, false);
         }
     }
+    document.addEventListener("keydown", (e)=>{
+        if (!e.repeat && e.key ===  "Escape" && location.hash) {
+            history.go(-1);
+        }
+    })
 }
