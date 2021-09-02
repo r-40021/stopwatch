@@ -38,7 +38,7 @@ export function modalClose() {
             element.addEventListener("touchstart", (e) => {
                 leave = false;
                 element.addEventListener("touchend", (e) => {
-                    if (!leave) {
+                    if (!leave && location.hash) {
                         e.preventDefault();
                         history.go(-1);
                     }
@@ -51,9 +51,10 @@ export function modalClose() {
             }, false);
         } else {
             element.addEventListener("click", (e) => {
-                e.preventDefault();
-                history.go(-1);
-
+                if (location.hash) {
+                    e.preventDefault();
+                    history.go(-1);                    
+                }
             }, false);
         }
     }
