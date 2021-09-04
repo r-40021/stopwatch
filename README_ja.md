@@ -16,5 +16,6 @@
 2. このアプリを開いている間は、お使いの端末はスリープしません。
 3. ライトモードとダークモードを切り替えることができます。
 
-# 出典
+# ライセンス表示
 - [NoSleep.js](https://github.com/richtr/NoSleep.js) Copyright (c) Rich Tibbett
+- [Bootstrap Icons](https://github.com/twbs/icons/blob/main/LICENSE.md) &copy; 2019-2020 The Bootstrap Authors
