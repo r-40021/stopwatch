@@ -17,5 +17,6 @@
 2. Your device will not sleep while you are using this app.
 3. You can switch between light mode and dark mode.
 
-# Authors
+# Credits
 - [NoSleep.js](https://github.com/richtr/NoSleep.js) Copyright (c) Rich Tibbett
+- [Bootstrap Icons](https://github.com/twbs/icons/blob/main/LICENSE.md) &copy; 2019-2020 The Bootstrap Authors
