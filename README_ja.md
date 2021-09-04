@@ -17,5 +17,5 @@
 3. ライトモードとダークモードを切り替えることができます。
 
 # ライセンス表示
-- [NoSleep.js](https://github.com/richtr/NoSleep.js) Copyright (c) Rich Tibbett
+- [NoSleep.js](https://github.com/richtr/NoSleep.js) &copy; Rich Tibbett
 - [Bootstrap Icons](https://github.com/twbs/icons/blob/main/LICENSE.md) &copy; 2019-2020 The Bootstrap Authors
