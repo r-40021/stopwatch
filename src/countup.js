@@ -11,6 +11,7 @@ export function start() {
     document.getElementById("start").style.display = "none";
     document.getElementById("stop").style.display = "inline-flex";
     isCount = true;
+    document.title = document.title.replace( ' (一時停止中)', '');
 }
 export function countup() {
     let now = Date.now();
@@ -46,6 +47,7 @@ export function countup() {
     }
     if (oldHour != display) {
     document.getElementById("displayHour").textContent = display;
+    document.title = display;
     resize();
     oldHour = display;
     }
@@ -57,12 +59,14 @@ export function stop() {
     document.getElementById("start").style.display = "";
     stopTime = diffTime;
     isCount = false;
+    document.title += ' (一時停止中)';
 }
 export function clear() {
     stopTime = 0;
     startTime = Date.now();
     document.getElementById("displayHour").textContent = "00:00";
     document.getElementById("displayMil").textContent = "000";
+    document.title = 'ストップウォッチ';
     resize();
 }
 export function isCountFunc (){
