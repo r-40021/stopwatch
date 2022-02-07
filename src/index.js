@@ -5,6 +5,7 @@ import { changeShareIcon } from "./device";
 import { copy, tweet, shareAPI } from "./share";
 import NoSleep from 'nosleep.js';
 import { modalTrigger, modalClose } from "./modal";
+import "./style.scss"
 
   resize();
   let myEventType;
