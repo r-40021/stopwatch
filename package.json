@@ -24,7 +24,7 @@
     "ansi-regex": ">=6.0.1",
     "css-loader": "^6.7.1",
     "glob-parent": ">=6.0.2",
-    "mini-css-extract-plugin": "^2.6.0",
+    "mini-css-extract-plugin": "^2.6.1",
     "nosleep.js": "^0.12.0",
     "sass": "^1.52.3",
     "sass-loader": "^13.0.0",
