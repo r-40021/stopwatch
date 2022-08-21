@@ -3,7 +3,7 @@
 
 <img src="./favicon/OGP.png" alt="logo" width = 60%>
 
-[Open the App](https://r-40021.github.io/stopwatch/)
+[Open the App](https://stopwatch.frogapp.net)
 
 # Screenshots
 ### Light Mode

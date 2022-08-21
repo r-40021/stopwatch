@@ -2,7 +2,7 @@
 
 <img src="./favicon/OGP.png" alt="logo" width = 60%>
 
-[アプリを開く](https://r-40021.github.io/stopwatch/)
+[アプリを開く](https://stopwatch.frogapp.net)
 
 # スクリーンショット
 ### ライトモード
